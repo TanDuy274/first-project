@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    display: inline-block;
+}
+
+.nav > li {
+    display: inline;
+    position: relative;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    text-transform: uppercase;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.nav li:hover a {
+    color: #000;
+    background-color: #ccc;
+    padding: 0 24px;
+}
+
+.nav li:hover .sub-nav { 
+    display: block;
+}
+
+.nav li i {
+    font-size: 12px;
+}
+
+.nav .sub-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 32px;
+    list-style: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    color: #000;
+}
+
+.nav .sub-nav li {
+    padding: 12px 50px 10px 14px;
+}
+
+.nav .sub-nav li:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: calc((46px - 19px)/2) 24px;
+    font-size: 16px;
+    display: none;
+}
+
+#header .search {
+    display: block;
+    float: right;
+    color: #fff;
+    padding: calc((46px - 19px)/2) 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+#header .search:hover {
+    background-color: #f44336;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider1.jpg') top center / cover no-repeat;
+}
+
+#slider .description {
+    text-align: center;
+    color: #fff;
+    padding: 36px 16px;
+}
+
+#slider .heading {
+    padding: 6px 0;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+#slider .about {
+    padding: 2px 0;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#contain .contain-1{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 90px 16px;
+}
+
+#contain .heading {
+    text-align: center;
+    font-size: 30px;
+    margin: 18px 0;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+#contain .description {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#contain .tour-description {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#contain .about {
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#contain .member-list {
+    overflow: hidden;
+}
+
+#contain .member {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+#contain .member-name {
+    padding-top: 40px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+#contain .member-img {
+    width: 150px;
+    border-radius: 4px
+}
+
+.tour-section {
+    background-color: #000;
+    color: #fff;
+}
+
+.tour-section .ticket-list {
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    color: #000;
+    background-color: #fff;
+}
+
+.tour-section .ticket-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px;
+    border-bottom: 1px solid #ccc;
+}
+.tour-section .sold-out {
+    margin-left: 16px;
+    color: #fff;
+    background-color: #f44336;
+    padding: 2px 8px;
+}
+
+.tour-section .quantity {
+    float: right;
+    color: #fff;
+    background-color: #000;
+    font-size: 15px;
+    margin-right: 16px;
+    margin-top: -2px;
+    padding: 2px 8px;
+    border-radius: 50%;
+}
+
+.tour-section .place-list {
+    overflow: hidden;
+    padding: 32px 0;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.tour-section .place {
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+.tour-section .place .place-img {
+    width: 100%;  
+    text-align: center;
+    display: block;
+}
+
+.tour-section .place-body {
+    color: #000;
+    background-color: #fff;
+    padding: 0 16px;
+    font-size: 15px;
+}
+
+.tour-section .place-name {
+    padding: 19px 0;
+    font-weight: 600;
+}
+
+.tour-section .time {
+    margin-bottom: 19px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.tour-section .place-about {
+    margin: 19px 0;
+}
+
+.tour-section .buy-ticket {
+    color: #fff;
+    background-color: #000;
+    font-size: 15px;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: none;
+}
+
+.tour-section .buy-ticket:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.contact {
+    margin-bottom: 90px;
+}
+
+.contact .band-info {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 1.6;
+}
+
+.contact .band-info .icon {
+    padding-right: 12px;
+    font-weight: 600;
+}
+
+.contact .input-info {
+    float: right;
+    width: 50%;
+}
+
+.contact .input-info .name {
+    width: 47%;
+    float: left;
+    padding: 12px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    margin-right: 18px;
+}
+
+.contact .input-info .email {
+    width: 48%;
+    float: left;
+    padding: 12px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+}
+
+.contact .input-info .mess {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+}
+
+.contact .send-info {
+    float: right;
+}
+
+.contact .send-info .send-btn {
+    color: #fff;
+    background-color: #000;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 12px 16px;
+    margin: 16px 0;
+    border: none
+}
+
+.contact .send-info .send-btn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.map img {
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+    opacity: 0.6;
+    padding: 64px 16px;
+}
+
+.footer .footer-icon {
+    font-size: 24px;
+}
+
+.footer .footer-source {
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.footer .footer-source a {
+    color: #000;
+}
